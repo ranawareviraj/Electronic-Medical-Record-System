@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="/images/Logo.jpeg" />
+    <script src="/js/custom.js"></script>
+    <title>Dental Clinic EMR System!</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="logo">
+        <a href="/"><img class="logo-img" src="/images/Logo.jpeg" /></a>
+      </div>
+      <div class="title">
+        <a class="branding" href="/">Dental Clinic EMR System!</a>
+      </div>
+      <div class="user-nav">
+        <ul class="user-nav-list">
+          <li class="user-nav-link">
+            <a href="/create-new-patient" class="user-login">Create Patient</a>
+          </li>
+          <li class="user-nav-link">
+            <a href="/view-patient-details" class="user-sign-up"
+              >View Patient Details</a
+            >
+          </li>
+          <li class="user-nav-link">
+            <a href="/view-patient-visits" class="user-start-trade"
+              >View All Appointments</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <% if(errorMessages.length > 0) {%> <% errorMessages.forEach(message=>{%>
+    <div class="error"><%=message%></div>
+    <%});%> <%}%> <% if(successMessages.length > 0) {%> <%
+    successMessages.forEach(message=>{%>
+    <div class="success"><%=message%></div>
+    <%});%> <%}%>
+  </body>
+</html>

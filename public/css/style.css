@@ -1,0 +1,346 @@
+/* Styles for header section */
+
+.user-nav {
+  display: inline;
+}
+
+.title {
+  font-size: 45px;
+  display: inline;
+}
+
+.user-nav {
+  float: right;
+  padding-top: 2%;
+}
+
+.logo {
+  float: left;
+}
+
+.logo-img {
+  height: 90px;
+  width: 90px;
+  display: inline;
+}
+
+.page-header {
+  background-color: #3f704d;
+  color: white;
+  border-bottom: 1px solid white;
+  display: block;
+  text-align: center;
+  height: 90px;
+}
+
+.user-nav-link {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.user-nav-list {
+  top: 0px;
+  display: inline;
+}
+
+.branding {
+  text-decoration: none;
+  color: white;
+}
+
+/* Styles for navigation bar */
+nav {
+  background-color: #3f704d;
+  padding: 5px 5px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li:hover {
+  background-color: yellowgreen;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  color: white;
+}
+
+.main-nav-link {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* Styles for Main Content of the page */
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.trade-image {
+  height: 90px;
+  width: 90px;
+  display: inline;
+}
+
+.trade-image-details {
+  height: 350px;
+  width: 350px;
+  display: inline;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  display: block;
+}
+
+.trade-price {
+  color: grey;
+  font-size: 22px;
+}
+
+.row {
+  margin: 0 5px;
+  padding: 0% 5% 5% 5%;
+  display: flex;
+}
+
+.trade-item {
+  margin: 0 5px;
+}
+
+.row::after {
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 1%;
+}
+
+.column-2 {
+  float: left;
+  width: 14%;
+  padding: 1%;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.submit-trade {
+  background-color: #04aa6d;
+  color: #f1f1f1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 8%;
+}
+
+.submit-trade:hover {
+  background-color: #45a049;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: white;
+  color: #43454a;
+}
+
+.home-section {
+  padding: 50px;
+  text-align: center;
+  background-color: white;
+  color: #43454a;
+}
+
+.create-trade {
+  border: 0;
+  background: #302c4b;
+  padding: 0.5rem;
+  color: white;
+  width: auto;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.trades-heading {
+  padding: 1%;
+}
+
+.column-3 {
+  float: left;
+  width: 60%;
+  padding: 1% 2%;
+}
+
+/* Styles for New Trade */
+.new-trade {
+  max-width: 500px;
+  margin: 20px;
+}
+
+/* Styles for Error page */
+.error-section {
+  padding: 50px;
+  text-align: center;
+  color: rgb(249, 88, 88);
+}
+
+/* Styles for footer */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #3f704d;
+}
+
+.footer-link {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+}
+
+/* Styles for HTML Elements */
+li a {
+  text-decoration: none;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #aeadad;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+textarea,
+input[type="text"],
+input[type="submit"],
+input[type="reset"],
+select {
+  width: 100%;
+  display: block;
+  font-size: 13px;
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+input[type="password"] {
+  width: 100%;
+  display: block;
+  font-size: 13px;
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+label {
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* misc */
+error {
+  margin: 19px auto;
+  background: rgba(255, 102, 51, 0.7);
+  color: #fff;
+  width: 78%;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.success {
+  margin: 19px auto;
+  background: rgba(108, 192, 112, 0.7);
+  color: #fff;
+  width: 78%;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.delete-btn {
+  background-color: red;
+  color: #f1f1f1;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+}
+
+.update-btn {
+  background-color: #1877f2;
+  color: #f1f1f1;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+}
+
+.watch-unwatch-btn {
+  background-color: green;
+  color: #f1f1f1;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+}
+
+.trade-btn {
+  background-color: green;
+  color: #f1f1f1;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+}

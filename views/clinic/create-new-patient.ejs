@@ -1,0 +1,95 @@
+<%- include ('../partials/header.ejs')%>
+<main>
+  <form action="/create-new-patient" class="new-trade" method="POST">
+    <div class="new-trade">
+        <label for="firstName">First Name</label>
+        <input
+          required
+          type="text"
+          id="firstName"
+          name="firstName"
+          value=""
+          placeholder="Enter First Name"
+        />
+    </div>
+    <div class="new-trade">
+        <label for="lastName">Last Name</label>
+        <input
+          required
+          type="text"
+          id="lastName"
+          name="lastName"
+          value=""
+          placeholder="Enter the Last Name"
+        />
+    </div>
+    <div class="new-trade">
+        <label for="patientAddress">Address</label>
+        <input
+          required
+          type="text"
+          id="patientAddress"
+          name="patientAddress"
+          value=""
+          placeholder="Enter the Address"
+        />
+    </div>
+    <div class="new-trade">
+        <label for="patientAge">Age</label>
+        <input
+          required
+          type="number"
+          min="1"
+          id="patientAge"
+          name="patientAge"
+          value=""
+          placeholder="Enter the Age"
+        />
+    </div>
+    <div class="new-trade">
+        <label for="insuranceType">Insurance Type</label>
+        <select
+          class="form-control"
+          name="insuranceType"
+          id="insuranceType"
+          required
+        >
+          <option value="Silver">Silver</option>
+          <option value="Gold">Gold</option>
+          <option value="Platinum">Platinum</option>
+        </select>
+    </div>
+    <div class="new-trade">
+        <label for="insurerID">Insurance Company Name</label>
+        <select class="form-control" name="insurerID" id="insurerID" required>
+          <%for( insurerDetail of insurerDetails ){ %>
+          <option value="<%=insurerDetail.insurer_id%>">
+            <%= insurerDetail.insurer_name %>
+          </option>
+          <%}%>
+        </select>
+    </div>
+    <div class="new-trade">
+        <label for="title">Insurance Number</label>
+        <input
+          required
+          type="number"
+          id="title"
+          value=""
+          name="Insurance_Number"
+          value=""
+          placeholder="Enter the Insurance Number"
+        />
+    </div>
+    <div class="new-trade">
+        <input type="submit" class="update-btn" value="Add Patient" /> <br>
+        <input type="reset" class="update-btn" value="reset" />
+    </div>
+  </form>
+</main>
+<br />
+<br />
+<br />
+<br />
+<br />
+<%- include ('../partials/footer.ejs')%>

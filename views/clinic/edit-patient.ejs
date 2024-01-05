@@ -1,0 +1,124 @@
+<%- include ('../partials/header.ejs')%>
+<div class="new-trade">
+  <form
+    method="POST"
+    action="/edit-patient-details/<%=patient.patient_id%>?_method=PUT"
+  >
+    <div class="new-trade">
+      <div class="new-trade">
+          <label for="first_name">First Name</label>
+          <input
+            required
+            type="text"
+            id="first_name"
+            name="first_name"
+            value="<%=patient.first_name%>"
+            placeholder="Enter First Name"
+          />
+      </div>
+      <div class="new-trade">
+          <label for="last_name">Last Name</label>
+          <input
+            required
+            type="text"
+            id="last_name"
+            name="last_name"
+            value="<%=patient.last_name%>"
+            placeholder="Enter the Last Name"
+          />
+      </div>
+      <div class="new-trade">
+          <label for="title">Address</label>
+          <input
+            required
+            type="text"
+            id="address"
+            name="address"
+            value="<%=patient.address%>"
+            placeholder="Enter the Address"
+          />
+      </div>
+      <div class="new-trade">
+          <label for="age">Age</label>
+          <input
+            required
+            type="number"
+            min="1"
+            id="age"
+            name="age"
+            value="<%=patient.age%>"
+            placeholder="Enter the Age"
+          />
+      </div>
+      <div class="new-trade">
+          <label for="insurance_type">Insurance Type</label>
+          <select
+            class="form-control"
+            name="insurance_type"
+            id="insurance_type"
+            value="<%=patient.insurance_type%>"
+            required
+          >
+            <option value="Basic">Silver</option>
+            <option value="Medium">Gold</option>
+            <option value="Platinum">Platinum</option>
+          </select>
+      </div>
+      <div class="new-trade">
+          <label for="insurer_id"
+            >Insurance Company Name</label
+          >
+          <select
+            class="form-control"
+            name="insurer_id"
+            id="insurer_id"
+            value="<%=patient.insurer_id%>"
+            required
+          >
+            <%for( insuranceCompanyDetail of insuranceCompanyDetails ){ var
+            selected = (insuranceCompanyDetail.insurer_id ==
+            patient.insurer_id ) ? "selected" : "";%>
+            <option
+              value="<%=insuranceCompanyDetail.insurer_id%>"
+              <%=selected%>
+              ><%= insuranceCompanyDetail.insurer_name %>
+            </option>
+            <%}%>
+          </select>
+      </div>
+      <div class="new-trade">
+          <label for="insurance_number">Insurance Number</label>
+          <input
+            required
+            type="number"
+            id="insurance_number"
+            value="<%=patient.insurance_number%>"
+            name="insurance_number"
+            value=""
+            placeholder="Enter the Insurance Number"
+          />
+          <input
+            required
+            hidden="true"
+            style="display: none;"
+            type="text"
+            id="insurance_id"
+            name="insurance_id"
+            value="<%=patient.insurance_id%>"
+            placeholder="Enter the Insurance Number"
+          />
+      </div>
+      <div class="new-trade">
+          <input type="submit" class="update-btn" value="Update Patient" /> <br>
+          <input type="reset" class="update-btn" value="reset" />
+      </div>
+    </div>
+  </form>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<%- include ('../partials/footer.ejs')%>

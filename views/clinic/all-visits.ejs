@@ -1,0 +1,41 @@
+<%- include('../partials/header.ejs')%>
+<section>
+  <div class="content" style="margin: 20px">
+    <div class="col mb-100">
+      <div class="event-heading">
+        <h3 class="dis-in-bl">List of All Visits</h3>
+      </div>
+      <%if(patients.length) { %>
+      <table>
+        <tr>
+          <th>Patient ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Appointment Date</th>
+          <th>Appointment Time</th>
+          <th>Procedure</th>
+          <th>Physician Name</th>
+        </tr>
+        <% patients.forEach(patient => { %>
+        <tr>
+          <td><%= patient.patient_id %></td>
+          <td><%= patient.first_name %></td>
+          <td><%= patient.last_name %></td>
+          <td><%= patient.appointment_date %></td>
+          <td><%= patient.appt_start_time %></td>
+          <td><%= patient.treatment_details %></td>
+          <td><%= patient.dentist_name %></td>
+        </tr>
+        <% })%>
+      </table>
+      <% } else { %>
+      <p style="margin: 20px auto; width: 95%">No Patients for displaying.</p>
+      <% } %>
+    </div>
+  </div>
+</section>
+<br />
+<br />
+<br />
+<br />
+<%- include('../partials/footer.ejs')%>
