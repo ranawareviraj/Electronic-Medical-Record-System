@@ -1,5 +1,5 @@
 # Electronic-Medical-Record-System
-Electronic Medical Record System
+**Author: Viraj Ranaware**
 
 <!-- TABLE OF CONTENTS -->
 <details>
